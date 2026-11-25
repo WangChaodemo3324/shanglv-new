@@ -1,0 +1,48 @@
+.page { min-height: 100vh; background: linear-gradient(160deg, #f5f9ff, #eef3fa);
+  font-family: -apple-system, "PingFang SC", sans-serif; color: #22384f; }
+
+.header { display: flex; align-items: center; padding: 16px 28px;
+  background: rgba(255,255,255,.85); backdrop-filter: blur(10px);
+  border-bottom: 1px solid #dde8f2; position: sticky; top: 0; z-index: 10; }
+.brand { display: flex; align-items: center; gap: 12px; flex: 1; }
+.logo { font-size: 30px; }
+.brand h1 { margin: 0; font-size: 18px; }
+.brand small { color: #7a97b4; font-size: 11px; }
+.back { color: #537699; font-size: 12px; text-decoration: none; }
+
+.main { max-width: 1100px; margin: 0 auto; padding: 24px; display: flex; gap: 20px; }
+.map { flex: 1; height: 520px; border-radius: 16px; overflow: hidden;
+  border: 1px solid #d8e5f2; box-shadow: 0 8px 30px rgba(30,70,120,.12); }
+
+.side { width: 320px; display: flex; flex-direction: column; gap: 16px; }
+.side h3 { margin: 0; font-size: 14px; }
+
+.ranking { background: #fff; border-radius: 12px; padding: 14px;
+  box-shadow: 0 4px 16px rgba(30,70,120,.08); display: flex; flex-direction: column; gap: 8px; }
+.rankRow { display: flex; align-items: center; gap: 8px; font-size: 12px; }
+.rankNo { width: 18px; height: 18px; border-radius: 50%; background: #1e5f8f; color: #fff;
+  display: grid; place-items: center; font-size: 10px; font-weight: 700; flex-shrink: 0; }
+.rankCity { width: 48px; font-weight: 600; }
+.rankTrack { flex: 1; height: 8px; background: #eef4fa; border-radius: 4px; overflow: hidden; }
+.rankBar { height: 100%; background: linear-gradient(90deg, #3d94d1, #1e5f8f); border-radius: 4px; }
+.rankCount { color: #64748b; font-size: 11px; width: 36px; text-align: right; }
+
+.timeline { background: #fff; border-radius: 12px; padding: 14px;
+  box-shadow: 0 4px 16px rgba(30,70,120,.08); display: flex; flex-direction: column; gap: 6px;
+  max-height: 300px; overflow-y: auto; }
+.tlItem { display: flex; gap: 8px; font-size: 11px; align-items: baseline;
+  padding: 4px 0; border-bottom: 1px dashed #eef2f7; }
+.tlItem:last-child { border-bottom: 0; }
+.tlDate { color: #64748b; font-variant-numeric: tabular-nums; flex-shrink: 0; }
+.tlRoute { color: #2c4a68; font-weight: 600; }
+.tlPurpose { color: #90a8c0; margin-left: auto; }
+
+.loading, .empty { min-height: 60vh; display: grid; place-content: center; text-align: center; }
+.empty h2 { color: #35506b; } .empty p { color: #7a97b4; font-size: 13px; }
+.empty a { color: #1e5f8f; text-decoration: none; }
+
+@media (max-width: 900px) {
+  .main { flex-direction: column; }
+  .side { width: 100%; }
+  .map { height: 360px; }
+}

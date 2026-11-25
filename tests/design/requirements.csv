@@ -1,0 +1,11 @@
+id,rule,priority,automated_test,status
+REQ-API-01,拒绝非法或空白输入且不执行模型,高,ApiTests.test_parameter_boundaries_no_execution / test_whitespace_should_be_rejected,通过（含空白拒绝）
+REQ-GATE-01,缺要素追问且补充时传递历史,高,ApiTests.test_gate_then_resume_keeps_context,通过（未覆盖真实规划生成）
+REQ-STATE-01,交错请求保持所属会话,最高,ApiTests.test_same_user_sessions_interleave_without_context_leak,通过（含历史及trace归属）
+REQ-IDEM-01,在途重复与完成回放不重复业务,高,ApiTests.test_inflight_duplicate_runs_business_once / test_preference_write_history_and_idempotent_replay,通过（进程内）
+REQ-CACHE-01,城市变化不复用旧城市结果,最高,ConsistencyTests.test_changed_destination_must_not_reuse_old_city_data,通过（保守整体失效）
+REQ-MEM-01,偏好更新不留下旧缓存,高,ConsistencyTests.test_preference_write_must_not_leave_stale_cache,通过（禁用偏好读缓存）
+REQ-FAIL-01,异常释放幂等并回收请求计数,高,ApiTests.test_pipeline_exception_releases_key_and_gauge,通过（异常回收）
+REQ-HISTORY-01,历史回放一致且删除范围正确,高,ApiTests.test_preference_write_history_and_idempotent_replay / test_delete_json_mode_is_explicitly_unavailable,部分覆盖（PG删除未验证）
+REQ-SEC-01,用户身份鉴权与所有权控制,最高,未实现,未验证（不等同用户ID过滤）
+REQ-DURABLE-01,真实当前任务路径进程恢复,高,未实现,未验证（仅客户端协议已测）

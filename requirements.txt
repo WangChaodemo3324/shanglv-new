@@ -1,0 +1,49 @@
+# 基础（milvus_lite 依赖 pkg_resources，需 setuptools<82）
+setuptools>=69.0.0,<82
+
+# 多智能体框架
+agentscope==1.0.16
+# agentscope 1.0.16 的 MCP 客户端与 mcp 2.x 不兼容（streamablehttp_client 已移除），须锁 1.x
+mcp>=1.13,<2
+
+# LLM 调用
+requests==2.32.3
+
+# RAG 与向量库（pymilvus[milvus_lite] 用于本地 .db 连接）
+pymilvus[milvus_lite]==2.6.9
+# milvus-lite 3.x 是重写版，与 pymilvus 2.6.x 的本地模式不兼容（路径会被误解析为库名），须锁 2.4.x
+milvus-lite==2.4.12
+sentence-transformers==5.2.3
+
+# CLI 界面
+rich==13.9.4
+
+# 网络搜索（DDGS）
+ddgs==9.10.0
+
+# 长期记忆 PostgreSQL 持久化（连接失败自动降级 JSON 文件）
+psycopg2-binary==2.9.13
+# 短期记忆 Redis 缓存 + 偏好/LLM总结缓存层（连接失败自动降级进程内存）
+redis==8.1.0
+# Web API 层（uvicorn 启动：venv/bin/python -m uvicorn server:app --port 8000）
+fastapi==0.141.1
+uvicorn[standard]==0.53.0
+# pi-durable 客户端（utils/pi_durable_client.py 的 HTTP 调用）
+httpx==0.28.1
+# SKILL.md frontmatter 解析（utils/skill_loader.py）
+PyYAML==6.0.3
+# Prometheus 指标出口（utils/metrics.py，/metrics 端点）
+prometheus-client==0.26.0
+# 单测与评测入口（tests/ 下 37 项单测；run_eval.py 默认先跑单测再进端到端评测）
+pytest==9.1.1
+# RAG 混合检索：BM25 关键词召回（jieba 分词；缺失时退化为纯向量检索）
+rank-bm25==0.2.2
+jieba==0.42.1
+ortools==9.15.6755  # 行程排程求解器（时间窗/预算/必去项约束）
+
+# agentscope 1.0.16 的 SQLAlchemy async memory 需要 greenlet（import agentscope 即触发，缺失直接 ImportError）
+greenlet
+
+# openai 3.35 的流式 delta 带 audio=None 字段，agentscope 1.0.16 的流式解析未防御会崩
+# （"data" in None → TypeError），须与原环境一致锁 3.13.0
+openai==3.13.0

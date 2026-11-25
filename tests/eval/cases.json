@@ -1,0 +1,1893 @@
+{
+  "version": "1.0",
+  "description": "商旅助手评测集：100 条单轮 case（12 意图分层覆盖：easy/medium/hard），附 rubric_points 质量评分点",
+  "cases": [
+    {
+      "id": "rag_001",
+      "query": "出差住宿标准是多少？",
+      "expect_agent": "rag_knowledge",
+      "must_contain": [
+        "500",
+        "400",
+        "300"
+      ],
+      "intent": "rag_knowledge",
+      "difficulty": "medium",
+      "labels": {
+        "turn_type": "single",
+        "has_gt": true,
+        "category": "rag_knowledge"
+      }
+    },
+    {
+      "id": "rag_002",
+      "query": "公司住宿报销的上限是多少",
+      "expect_agent": "rag_knowledge",
+      "must_contain": [
+        "一线",
+        "二线"
+      ],
+      "intent": "rag_knowledge",
+      "difficulty": "medium",
+      "labels": {
+        "turn_type": "single",
+        "has_gt": true,
+        "category": "rag_knowledge"
+      }
+    },
+    {
+      "id": "rag_003",
+      "query": "报销差旅费用需要哪些材料",
+      "expect_agent": "rag_knowledge",
+      "must_contain": [
+        "发票"
+      ],
+      "intent": "rag_knowledge",
+      "difficulty": "medium",
+      "labels": {
+        "turn_type": "single",
+        "has_gt": true,
+        "category": "rag_knowledge"
+      }
+    },
+    {
+      "id": "rag_004",
+      "query": "航班延误了怎么办？",
+      "expect_agent": "rag_knowledge",
+      "must_contain": [
+        "改签"
+      ],
+      "intent": "rag_knowledge",
+      "difficulty": "medium",
+      "labels": {
+        "turn_type": "single",
+        "has_gt": true,
+        "category": "rag_knowledge"
+      }
+    },
+    {
+      "id": "rag_005",
+      "query": "机票应该提前多久预订",
+      "expect_agent": "rag_knowledge",
+      "must_contain": [
+        "提前"
+      ],
+      "intent": "rag_knowledge",
+      "difficulty": "medium",
+      "labels": {
+        "turn_type": "single",
+        "has_gt": true,
+        "category": "rag_knowledge"
+      }
+    },
+    {
+      "id": "rag_006",
+      "query": "出差期间生病了医疗费能报销吗",
+      "expect_agent": "rag_knowledge",
+      "must_contain": [
+        "报销"
+      ],
+      "intent": "rag_knowledge",
+      "difficulty": "medium",
+      "labels": {
+        "turn_type": "single",
+        "has_gt": true,
+        "category": "rag_knowledge"
+      }
+    },
+    {
+      "id": "rag_007",
+      "query": "国际出差签证费用怎么算",
+      "expect_agent": "rag_knowledge",
+      "must_contain": [
+        "签证"
+      ],
+      "intent": "rag_knowledge",
+      "difficulty": "medium",
+      "labels": {
+        "turn_type": "single",
+        "has_gt": true,
+        "category": "rag_knowledge"
+      }
+    },
+    {
+      "id": "rag_008",
+      "query": "紧急情况联系谁？",
+      "expect_agent": "rag_knowledge",
+      "must_contain": [
+        "联系"
+      ],
+      "intent": "rag_knowledge",
+      "difficulty": "medium",
+      "labels": {
+        "turn_type": "single",
+        "has_gt": true,
+        "category": "rag_knowledge"
+      }
+    },
+    {
+      "id": "pref_001",
+      "query": "我偏好住万豪酒店和希尔顿，喜欢坐国航和东航，座位要靠窗，请记住",
+      "expect_agent": "preference",
+      "must_contain": [
+        "万豪"
+      ],
+      "intent": "preference",
+      "pre_state": "fresh_user",
+      "difficulty": "medium",
+      "labels": {
+        "turn_type": "single",
+        "has_gt": true,
+        "category": "preference"
+      }
+    },
+    {
+      "id": "pref_002",
+      "query": "我喜欢住如家",
+      "expect_agent": "preference",
+      "must_contain": [
+        "如家"
+      ],
+      "intent": "preference",
+      "pre_state": "fresh_user",
+      "difficulty": "medium",
+      "labels": {
+        "turn_type": "single",
+        "has_gt": true,
+        "category": "preference"
+      }
+    },
+    {
+      "id": "pref_003",
+      "query": "我常坐东航",
+      "expect_agent": "preference",
+      "must_contain": [
+        "东航"
+      ],
+      "intent": "preference",
+      "pre_state": "fresh_user",
+      "difficulty": "medium",
+      "labels": {
+        "turn_type": "single",
+        "has_gt": true,
+        "category": "preference"
+      }
+    },
+    {
+      "id": "pref_004",
+      "query": "我家住北京朝阳区",
+      "expect_agent": "preference",
+      "must_contain": [
+        "朝阳区"
+      ],
+      "intent": "preference",
+      "pre_state": "fresh_user",
+      "difficulty": "medium",
+      "labels": {
+        "turn_type": "single",
+        "has_gt": true,
+        "category": "preference"
+      }
+    },
+    {
+      "id": "pref_005",
+      "query": "我搬家到上海了",
+      "expect_agent": "preference",
+      "must_contain": [
+        "上海"
+      ],
+      "intent": "preference",
+      "pre_state": "fresh_user",
+      "difficulty": "medium",
+      "labels": {
+        "turn_type": "single",
+        "has_gt": true,
+        "category": "preference"
+      }
+    },
+    {
+      "id": "mem_001",
+      "query": "我常去哪些城市出差？出差的频率怎么样",
+      "expect_agent": "memory_query",
+      "must_contain": [],
+      "intent": "memory_query",
+      "pre_state": "with_history",
+      "difficulty": "medium",
+      "labels": {
+        "turn_type": "single",
+        "has_gt": true,
+        "category": "memory_query"
+      }
+    },
+    {
+      "id": "mem_002",
+      "query": "我之前说过什么偏好",
+      "expect_agent": "memory_query",
+      "must_contain": [],
+      "intent": "memory_query",
+      "pre_state": "with_history",
+      "difficulty": "medium",
+      "labels": {
+        "turn_type": "single",
+        "has_gt": true,
+        "category": "memory_query"
+      }
+    },
+    {
+      "id": "mem_003",
+      "query": "查询我最近的差旅记录",
+      "expect_agent": "memory_query",
+      "must_contain": [],
+      "intent": "memory_query",
+      "pre_state": "with_history",
+      "difficulty": "medium",
+      "labels": {
+        "turn_type": "single",
+        "has_gt": true,
+        "category": "memory_query"
+      }
+    },
+    {
+      "id": "wthr_001",
+      "query": "杭州下周的天气怎么样？",
+      "expect_agent": "information_query",
+      "must_contain": [
+        "°C"
+      ],
+      "intent": "information_query",
+      "difficulty": "medium",
+      "labels": {
+        "turn_type": "single",
+        "has_gt": true,
+        "category": "information_query"
+      }
+    },
+    {
+      "id": "wthr_002",
+      "query": "北京明天天气如何",
+      "expect_agent": "information_query",
+      "must_contain": [
+        "°C"
+      ],
+      "intent": "information_query",
+      "difficulty": "medium",
+      "labels": {
+        "turn_type": "single",
+        "has_gt": true,
+        "category": "information_query"
+      }
+    },
+    {
+      "id": "plan_001",
+      "query": "帮我规划2027年5月10日到5月12日去杭州的3天行程，必去西湖和灵隐寺",
+      "expect_agent": "itinerary_planning",
+      "must_contain": [
+        "西湖"
+      ],
+      "intent": "itinerary_planning",
+      "difficulty": "medium",
+      "labels": {
+        "turn_type": "single",
+        "has_gt": true,
+        "category": "itinerary_planning"
+      }
+    },
+    {
+      "id": "plan_002",
+      "query": "我要去上海出差5天，10月20日出发，帮我规划详细行程",
+      "expect_agent": "itinerary_planning",
+      "must_contain": [
+        "上海"
+      ],
+      "intent": "itinerary_planning",
+      "difficulty": "medium",
+      "labels": {
+        "turn_type": "single",
+        "has_gt": true,
+        "category": "itinerary_planning"
+      }
+    },
+    {
+      "id": "plan_003",
+      "query": "规划一个广州2日游，下周五出发",
+      "expect_agent": "itinerary_planning",
+      "must_contain": [
+        "广州"
+      ],
+      "intent": "itinerary_planning",
+      "difficulty": "medium",
+      "labels": {
+        "turn_type": "single",
+        "has_gt": true,
+        "category": "itinerary_planning"
+      }
+    },
+    {
+      "id": "gate_001",
+      "query": "帮我规划去杭州的行程",
+      "expect_agent": "needs_input",
+      "must_contain": [
+        "补充",
+        "天"
+      ],
+      "intent": "itinerary_planning",
+      "difficulty": "medium",
+      "labels": {
+        "turn_type": "single",
+        "has_gt": true,
+        "category": "itinerary_planning"
+      }
+    },
+    {
+      "id": "gate_002",
+      "query": "帮我做个出差费用预估",
+      "expect_agent": "needs_input",
+      "must_contain": [
+        "补充"
+      ],
+      "intent": "expense_estimate",
+      "difficulty": "medium",
+      "labels": {
+        "turn_type": "single",
+        "has_gt": true,
+        "category": "expense_estimate"
+      }
+    },
+    {
+      "id": "budg_001",
+      "query": "去杭州出差3天，公司的报销上限是多少？",
+      "expect_agent": "budget_check",
+      "must_contain": [
+        "400"
+      ],
+      "intent": "budget_check",
+      "difficulty": "medium",
+      "labels": {
+        "turn_type": "single",
+        "has_gt": true,
+        "category": "budget_check"
+      }
+    },
+    {
+      "id": "budg_002",
+      "query": "北京出差的住宿标准上限",
+      "expect_agent": "budget_check",
+      "must_contain": [
+        "500"
+      ],
+      "intent": "budget_check",
+      "difficulty": "medium",
+      "labels": {
+        "turn_type": "single",
+        "has_gt": true,
+        "category": "budget_check"
+      }
+    },
+    {
+      "id": "expe_001",
+      "query": "我从北京去杭州出差3天，大概要花多少钱？公司能报多少",
+      "expect_agents": [
+        "budget_check",
+        "expense_estimate"
+      ],
+      "must_contain": [
+        "预算",
+        "预估"
+      ],
+      "intent": "expense_estimate",
+      "difficulty": "medium",
+      "labels": {
+        "turn_type": "single",
+        "has_gt": true,
+        "category": "expense_estimate"
+      }
+    },
+    {
+      "id": "cmpf_001",
+      "query": "从北京到杭州，高铁和飞机哪个更划算？",
+      "expect_agent": "compare_fares",
+      "must_contain": [
+        "推荐"
+      ],
+      "intent": "compare_fares",
+      "difficulty": "medium",
+      "labels": {
+        "turn_type": "single",
+        "has_gt": true,
+        "category": "compare_fares"
+      }
+    },
+    {
+      "id": "walrt_001",
+      "query": "我下周去广州出差要准备什么？",
+      "expect_agent": "weather_alert",
+      "must_contain": [
+        "广州"
+      ],
+      "intent": "weather_alert",
+      "difficulty": "medium",
+      "labels": {
+        "turn_type": "single",
+        "has_gt": true,
+        "category": "weather_alert"
+      }
+    },
+    {
+      "id": "cnfl_001",
+      "query": "我2027年6月11日到6月13日想去上海出差，这个安排和我的行程冲突吗",
+      "expect_agent": "conflict_check",
+      "must_contain": [
+        "冲突"
+      ],
+      "intent": "conflict_check",
+      "pre_state": "with_conflict",
+      "difficulty": "medium",
+      "labels": {
+        "turn_type": "single",
+        "has_gt": true,
+        "category": "conflict_check"
+      }
+    },
+    {
+      "id": "sens_001",
+      "query": "我要投诉这家酒店太差了",
+      "expect_agent": "escalation",
+      "must_contain": [
+        "投诉",
+        "400"
+      ],
+      "intent": "escalation",
+      "difficulty": "medium",
+      "labels": {
+        "turn_type": "single",
+        "has_gt": true,
+        "category": "escalation"
+      }
+    },
+    {
+      "id": "sens_002",
+      "query": "重复扣款了，快退款",
+      "expect_agent": "escalation",
+      "must_contain": [
+        "退款"
+      ],
+      "intent": "escalation",
+      "difficulty": "medium",
+      "labels": {
+        "turn_type": "single",
+        "has_gt": true,
+        "category": "escalation"
+      }
+    },
+    {
+      "id": "sens_003",
+      "query": "出差遇到人身安全威胁怎么办",
+      "expect_agent": "escalation",
+      "must_contain": [
+        "110"
+      ],
+      "intent": "escalation",
+      "difficulty": "medium",
+      "labels": {
+        "turn_type": "single",
+        "has_gt": true,
+        "category": "escalation"
+      }
+    },
+    {
+      "id": "rag_009",
+      "query": "我想去天津，这个标准是多少呢？",
+      "expect_agent": "budget_check",
+      "must_contain": [
+        "500"
+      ],
+      "intent": "budget_check",
+      "difficulty": "medium",
+      "labels": {
+        "turn_type": "single",
+        "has_gt": true,
+        "category": "budget_check"
+      }
+    },
+    {
+      "id": "trip_001",
+      "query": "对比一下下个月从北京去杭州出差3天和去苏州旅游2天，哪个方案更合适？",
+      "expect_agent": "trip_compare",
+      "must_contain": [
+        "方案"
+      ],
+      "intent": "trip_compare",
+      "difficulty": "medium",
+      "labels": {
+        "turn_type": "single",
+        "has_gt": true,
+        "category": "trip_compare"
+      }
+    },
+    {
+      "id": "rag_010",
+      "query": "差旅费用报销的时限是多久？逾期怎么办？",
+      "expect_agent": [
+        "rag_knowledge"
+      ],
+      "must_contain": [
+        "30"
+      ],
+      "intent": "rag_knowledge",
+      "difficulty": "easy",
+      "rubric_points": [
+        "报销时限 30 天要明确",
+        "逾期处理（书面说明+主管审批）要提及"
+      ],
+      "labels": {
+        "turn_type": "single",
+        "has_gt": true,
+        "category": "policy"
+      }
+    },
+    {
+      "id": "rag_011",
+      "query": "酒店不含早餐的话早餐怎么报销？",
+      "expect_agent": [
+        "rag_knowledge"
+      ],
+      "must_contain": [
+        "30"
+      ],
+      "intent": "rag_knowledge",
+      "difficulty": "easy",
+      "rubric_points": [
+        "早餐单独报销标准不超过 30 元/餐",
+        "需酒店不含早的前提说明"
+      ],
+      "labels": {
+        "turn_type": "single",
+        "has_gt": true,
+        "category": "policy"
+      }
+    },
+    {
+      "id": "rag_012",
+      "query": "招待费报销需要哪些凭证？有哪些注意事项？",
+      "expect_agent": [
+        "rag_knowledge"
+      ],
+      "must_contain": [],
+      "intent": "rag_knowledge",
+      "difficulty": "medium",
+      "rubric_points": [
+        "招待费凭证清单（发票/审批单等）",
+        "注意事项（标准/审批要求）"
+      ],
+      "labels": {
+        "turn_type": "single",
+        "has_gt": true,
+        "category": "policy"
+      }
+    },
+    {
+      "id": "rag_013",
+      "query": "预订机票时姓名写错了怎么办？",
+      "expect_agent": [
+        "rag_knowledge"
+      ],
+      "must_contain": [],
+      "intent": "rag_knowledge",
+      "difficulty": "medium",
+      "rubric_points": [
+        "姓名错误的处理流程（改签/退改说明）",
+        "身份证信息一致的提醒"
+      ],
+      "labels": {
+        "turn_type": "single",
+        "has_gt": true,
+        "category": "booking"
+      }
+    },
+    {
+      "id": "rag_014",
+      "query": "公司对绿色出行的差旅有什么倡议或要求？",
+      "expect_agent": [
+        "rag_knowledge"
+      ],
+      "must_contain": [],
+      "intent": "rag_knowledge",
+      "difficulty": "medium",
+      "rubric_points": [
+        "环保倡议内容（如电子票据/公共交通）",
+        "至少两条具体倡议"
+      ],
+      "labels": {
+        "turn_type": "single",
+        "has_gt": true,
+        "category": "policy"
+      }
+    },
+    {
+      "id": "rag_015",
+      "query": "第一次用差旅平台订酒店，整个流程是怎样的？",
+      "expect_agent": [
+        "rag_knowledge"
+      ],
+      "must_contain": [],
+      "intent": "rag_knowledge",
+      "difficulty": "medium",
+      "rubric_points": [
+        "预订流程步骤（登录/搜索/提交/审批）",
+        "差旅平台的使用要点"
+      ],
+      "labels": {
+        "turn_type": "single",
+        "has_gt": true,
+        "category": "platform"
+      }
+    },
+    {
+      "id": "rag_016",
+      "query": "高原地区出差住宿标准能上浮吗？上浮多少？",
+      "expect_agent": [
+        "rag_knowledge"
+      ],
+      "must_contain": [
+        "20",
+        "西藏"
+      ],
+      "intent": "rag_knowledge",
+      "difficulty": "hard",
+      "rubric_points": [
+        "高原地区（西藏/新疆/青海）可上浮",
+        "上浮比例 20% 要准确"
+      ],
+      "labels": {
+        "turn_type": "single",
+        "has_gt": true,
+        "category": "policy"
+      }
+    },
+    {
+      "id": "pref_006",
+      "query": "我以后住酒店都要大床房，请帮我记住",
+      "expect_agent": [
+        "preference"
+      ],
+      "must_contain": [],
+      "intent": "preference",
+      "difficulty": "easy",
+      "rubric_points": [
+        "识别为偏好存储意图",
+        "确认已记住的回应"
+      ],
+      "labels": {
+        "turn_type": "single",
+        "has_gt": true,
+        "category": "profile"
+      }
+    },
+    {
+      "id": "pref_007",
+      "query": "别再给我订早班机了，太累了",
+      "expect_agent": [
+        "preference"
+      ],
+      "must_contain": [],
+      "intent": "preference",
+      "difficulty": "medium",
+      "rubric_points": [
+        "识别为航班时间偏好（避免早班）",
+        "记录偏好并回应"
+      ],
+      "labels": {
+        "turn_type": "single",
+        "has_gt": true,
+        "category": "profile"
+      }
+    },
+    {
+      "id": "pref_008",
+      "query": "我对海鲜过敏，出差安排用餐时注意下",
+      "expect_agent": [
+        "preference"
+      ],
+      "must_contain": [],
+      "intent": "preference",
+      "difficulty": "medium",
+      "rubric_points": [
+        "识别为饮食禁忌偏好",
+        "记录并回应"
+      ],
+      "labels": {
+        "turn_type": "single",
+        "has_gt": true,
+        "category": "profile"
+      }
+    },
+    {
+      "id": "pref_009",
+      "query": "我升职了，以后都是自己审批差旅，不用再走主管了",
+      "expect_agent": [
+        "preference"
+      ],
+      "must_contain": [],
+      "intent": "preference",
+      "difficulty": "hard",
+      "rubric_points": [
+        "识别为职级/审批变化信息",
+        "偏好更新或需要说明审批规则"
+      ],
+      "labels": {
+        "turn_type": "single",
+        "has_gt": true,
+        "category": "profile"
+      }
+    },
+    {
+      "id": "pref_010",
+      "query": "座靠窗这个偏好取消掉吧，我现在喜欢靠过道",
+      "expect_agent": [
+        "preference"
+      ],
+      "must_contain": [],
+      "intent": "preference",
+      "difficulty": "hard",
+      "rubric_points": [
+        "识别为偏好修改（取消靠窗改过道）",
+        "更新偏好并确认"
+      ],
+      "labels": {
+        "turn_type": "single",
+        "has_gt": true,
+        "category": "profile"
+      }
+    },
+    {
+      "id": "pref_011",
+      "query": "以后预算内的住宿直接订行政房，可以吧？",
+      "expect_agent": [
+        "preference"
+      ],
+      "must_contain": [],
+      "intent": "preference",
+      "difficulty": "hard",
+      "rubric_points": [
+        "识别为房型偏好表达",
+        "涉及预算标准约束时应说明政策边界"
+      ],
+      "labels": {
+        "turn_type": "single",
+        "has_gt": true,
+        "category": "profile"
+      }
+    },
+    {
+      "id": "mem_004",
+      "query": "我上次去上海是什么时候？住的是哪家酒店？",
+      "expect_agent": [
+        "memory_query"
+      ],
+      "must_contain": [],
+      "intent": "memory_query",
+      "difficulty": "easy",
+      "rubric_points": [
+        "从历史行程回答上海之行时间",
+        "酒店信息（有则答，无则如实说明）"
+      ],
+      "labels": {
+        "turn_type": "single",
+        "has_gt": true,
+        "category": "history"
+      }
+    },
+    {
+      "id": "mem_005",
+      "query": "我的航班座位偏好是什么来着？",
+      "expect_agent": [
+        "memory_query"
+      ],
+      "must_contain": [],
+      "intent": "memory_query",
+      "difficulty": "easy",
+      "rubric_points": [
+        "正确复述已存的座位偏好",
+        "不编造未存储的偏好"
+      ],
+      "labels": {
+        "turn_type": "single",
+        "has_gt": true,
+        "category": "history"
+      }
+    },
+    {
+      "id": "mem_006",
+      "query": "这半年我一共出过几次差？分别是去哪？",
+      "expect_agent": [
+        "memory_query"
+      ],
+      "must_contain": [],
+      "intent": "memory_query",
+      "difficulty": "medium",
+      "rubric_points": [
+        "出差次数统计",
+        "目的地列表"
+      ],
+      "labels": {
+        "turn_type": "single",
+        "has_gt": true,
+        "category": "history"
+      }
+    },
+    {
+      "id": "mem_007",
+      "query": "我是不是还没去过深圳？帮我确认下",
+      "expect_agent": [
+        "memory_query"
+      ],
+      "must_contain": [],
+      "intent": "memory_query",
+      "difficulty": "hard",
+      "rubric_points": [
+        "基于历史行程确认是否去过深圳",
+        "无记录时如实说明"
+      ],
+      "labels": {
+        "turn_type": "single",
+        "has_gt": true,
+        "category": "history"
+      }
+    },
+    {
+      "id": "mem_008",
+      "query": "跟我讲讲我的差旅足迹：最常去的城市、最远的一次出差",
+      "expect_agent": [
+        "memory_query",
+        "itinerary_lookup"
+      ],
+      "must_contain": [],
+      "intent": "memory_query",
+      "difficulty": "hard",
+      "rubric_points": [
+        "最常去城市统计",
+        "最远行程或如实说明"
+      ],
+      "labels": {
+        "turn_type": "single",
+        "has_gt": true,
+        "category": "history"
+      }
+    },
+    {
+      "id": "info_001",
+      "query": "现在从北京到上海的高铁大概要多久？",
+      "expect_agent": [
+        "information_query"
+      ],
+      "must_contain": [],
+      "intent": "information_query",
+      "difficulty": "easy",
+      "rubric_points": [
+        "给出京沪高铁时长（约 4.5-6 小时区间）",
+        "不编造精确班次"
+      ],
+      "labels": {
+        "turn_type": "single",
+        "has_gt": true,
+        "category": "travel_info"
+      }
+    },
+    {
+      "id": "info_002",
+      "query": "查一下下周去成都需要带什么衣服",
+      "expect_agent": [
+        "information_query",
+        "weather_alert"
+      ],
+      "must_contain": [],
+      "intent": "information_query",
+      "difficulty": "medium",
+      "rubric_points": [
+        "基于成都天气给穿衣建议",
+        "天气数据来源可靠"
+      ],
+      "labels": {
+        "turn_type": "single",
+        "has_gt": true,
+        "category": "weather"
+      }
+    },
+    {
+      "id": "info_003",
+      "query": "杭州有什么好玩的地方？出差顺便逛逛",
+      "expect_agent": [
+        "information_query"
+      ],
+      "must_contain": [],
+      "intent": "information_query",
+      "difficulty": "medium",
+      "rubric_points": [
+        "杭州景点推荐（西湖等）",
+        "内容与杭州相关不跑题"
+      ],
+      "labels": {
+        "turn_type": "single",
+        "has_gt": true,
+        "category": "travel_info"
+      }
+    },
+    {
+      "id": "info_004",
+      "query": "最近人民币对美元汇率怎么样？出差换汇用",
+      "expect_agent": [
+        "information_query"
+      ],
+      "must_contain": [],
+      "intent": "information_query",
+      "difficulty": "hard",
+      "rubric_points": [
+        "给出汇率信息或如实说明无法获取",
+        "不编造精确汇率"
+      ],
+      "labels": {
+        "turn_type": "single",
+        "has_gt": true,
+        "category": "finance"
+      }
+    },
+    {
+      "id": "info_005",
+      "query": "北京大兴机场和首都机场哪个离市区近？去哪个方便？",
+      "expect_agent": [
+        "information_query"
+      ],
+      "must_contain": [],
+      "intent": "information_query",
+      "difficulty": "medium",
+      "rubric_points": [
+        "两机场位置对比",
+        "交通建议合理"
+      ],
+      "labels": {
+        "turn_type": "single",
+        "has_gt": true,
+        "category": "travel_info"
+      }
+    },
+    {
+      "id": "plan_004",
+      "query": "帮我安排 11 月 10 日到 12 日去西安的 3 天行程，想去兵马俑和回民街",
+      "expect_agent": [
+        "itinerary_planning"
+      ],
+      "must_contain": [],
+      "intent": "itinerary_planning",
+      "difficulty": "medium",
+      "rubric_points": [
+        "三天行程结构完整",
+        "兵马俑和回民街都在行程中"
+      ],
+      "labels": {
+        "turn_type": "single",
+        "has_gt": true,
+        "category": "planning"
+      }
+    },
+    {
+      "id": "plan_005",
+      "query": "规划一个成都 2 日游，第一天看熊猫，第二天吃火锅逛宽窄巷子",
+      "expect_agent": [
+        "itinerary_planning"
+      ],
+      "must_contain": [],
+      "intent": "itinerary_planning",
+      "difficulty": "medium",
+      "rubric_points": [
+        "熊猫基地安排在第一天",
+        "宽窄巷子安排在第二天"
+      ],
+      "labels": {
+        "turn_type": "single",
+        "has_gt": true,
+        "category": "planning"
+      }
+    },
+    {
+      "id": "plan_006",
+      "query": "下周五到周日去南京出差，顺便想逛逛，帮我规划下行程",
+      "expect_agent": [
+        "itinerary_planning"
+      ],
+      "must_contain": [],
+      "intent": "itinerary_planning",
+      "difficulty": "hard",
+      "rubric_points": [
+        "三天下周五至周日的行程框架",
+        "兼顾出差与游览"
+      ],
+      "labels": {
+        "turn_type": "single",
+        "has_gt": true,
+        "category": "planning"
+      }
+    },
+    {
+      "id": "plan_007",
+      "query": "带爸妈去北京玩 4 天，他们腿脚不太好，行程别太赶",
+      "expect_agent": [
+        "itinerary_planning"
+      ],
+      "must_contain": [],
+      "intent": "itinerary_planning",
+      "difficulty": "hard",
+      "rubric_points": [
+        "四天行程节奏舒缓",
+        "考虑老人体力（少换酒店/宽松安排）"
+      ],
+      "labels": {
+        "turn_type": "single",
+        "has_gt": true,
+        "category": "planning"
+      }
+    },
+    {
+      "id": "plan_008",
+      "query": "我想去杭州出差顺便玩一天，帮我规划那一天",
+      "expect_agent": [
+        "itinerary_planning"
+      ],
+      "must_contain": [],
+      "intent": "itinerary_planning",
+      "difficulty": "hard",
+      "rubric_points": [
+        "单日行程完整",
+        "经典景点安排合理"
+      ],
+      "labels": {
+        "turn_type": "single",
+        "has_gt": true,
+        "category": "planning"
+      }
+    },
+    {
+      "id": "plan_009",
+      "query": "公司团建 20 人要去青岛 2 天，预算人均 800，怎么安排？",
+      "expect_agent": [
+        "itinerary_planning"
+      ],
+      "must_contain": [],
+      "intent": "itinerary_planning",
+      "difficulty": "hard",
+      "rubric_points": [
+        "两日团队行程",
+        "预算约束的体现（人均 800）"
+      ],
+      "labels": {
+        "turn_type": "single",
+        "has_gt": true,
+        "category": "planning"
+      }
+    },
+    {
+      "id": "expe_002",
+      "query": "下个月去广州出差 4 天，帮我估一下大概花费",
+      "expect_agent": [
+        "budget_check",
+        "expense_estimate"
+      ],
+      "must_contain": [
+        "400"
+      ],
+      "intent": "expense_estimate",
+      "difficulty": "medium",
+      "rubric_points": [
+        "住宿/餐饮分项预估",
+        "广州二线标准 400 元/晚依据"
+      ],
+      "labels": {
+        "turn_type": "single",
+        "has_gt": true,
+        "category": "estimation"
+      }
+    },
+    {
+      "id": "expe_003",
+      "query": "北京到哈尔滨出差 3 天费用预算多少？含交通",
+      "expect_agent": [
+        "budget_check",
+        "expense_estimate"
+      ],
+      "must_contain": [],
+      "intent": "expense_estimate",
+      "difficulty": "medium",
+      "rubric_points": [
+        "交通费用预估",
+        "住宿餐饮预估"
+      ],
+      "labels": {
+        "turn_type": "single",
+        "has_gt": true,
+        "category": "estimation"
+      }
+    },
+    {
+      "id": "expe_004",
+      "query": "上海出差一周的总花销估计，我需要提前申请备用金",
+      "expect_agent": [
+        "budget_check",
+        "expense_estimate"
+      ],
+      "must_contain": [],
+      "intent": "expense_estimate",
+      "difficulty": "hard",
+      "rubric_points": [
+        "七天费用合计区间",
+        "分项构成说明"
+      ],
+      "labels": {
+        "turn_type": "single",
+        "has_gt": true,
+        "category": "estimation"
+      }
+    },
+    {
+      "id": "expe_005",
+      "query": "去深圳出差 2 天，住公司协议酒店的话要花多少？",
+      "expect_agent": [
+        "budget_check",
+        "expense_estimate"
+      ],
+      "must_contain": [
+        "500"
+      ],
+      "intent": "expense_estimate",
+      "difficulty": "hard",
+      "rubric_points": [
+        "协议酒店价格因素",
+        "深圳一线标准 500 元/晚"
+      ],
+      "labels": {
+        "turn_type": "single",
+        "has_gt": true,
+        "category": "estimation"
+      }
+    },
+    {
+      "id": "expe_006",
+      "query": "对比下我去武汉出差住快捷酒店和协议酒店的花费差异",
+      "expect_agent": [
+        "budget_check",
+        "expense_estimate",
+        "compare_fares"
+      ],
+      "must_contain": [],
+      "intent": "expense_estimate",
+      "difficulty": "hard",
+      "rubric_points": [
+        "两类酒店费用对比",
+        "差价结论"
+      ],
+      "labels": {
+        "turn_type": "single",
+        "has_gt": true,
+        "category": "estimation"
+      }
+    },
+    {
+      "id": "budg_003",
+      "query": "深圳出差的住宿报销上限是多少？",
+      "expect_agent": [
+        "budget_check"
+      ],
+      "must_contain": [
+        "500"
+      ],
+      "intent": "budget_check",
+      "difficulty": "easy",
+      "rubric_points": [
+        "深圳一线标准 500 元/晚",
+        "分类依据（一线城市）"
+      ],
+      "labels": {
+        "turn_type": "single",
+        "has_gt": true,
+        "category": "budget"
+      }
+    },
+    {
+      "id": "budg_004",
+      "query": "成都的差旅餐饮标准是每天多少？",
+      "expect_agent": [
+        "budget_check"
+      ],
+      "must_contain": [
+        "230"
+      ],
+      "intent": "budget_check",
+      "difficulty": "easy",
+      "rubric_points": [
+        "成都二线餐饮标准",
+        "金额准确"
+      ],
+      "labels": {
+        "turn_type": "single",
+        "has_gt": true,
+        "category": "budget"
+      }
+    },
+    {
+      "id": "budg_005",
+      "query": "去拉萨出差住宿标准跟普通城市一样吗？",
+      "expect_agent": [
+        "budget_check"
+      ],
+      "must_contain": [
+        "20"
+      ],
+      "intent": "budget_check",
+      "difficulty": "hard",
+      "rubric_points": [
+        "高原地区上浮 20%",
+        "基准标准说明"
+      ],
+      "labels": {
+        "turn_type": "single",
+        "has_gt": true,
+        "category": "budget"
+      }
+    },
+    {
+      "id": "budg_006",
+      "query": "我下季度要去天津、石家庄、苏州三个城市出差，各自的住宿标准分别列一下",
+      "expect_agent": [
+        "budget_check"
+      ],
+      "must_contain": [],
+      "intent": "budget_check",
+      "difficulty": "hard",
+      "rubric_points": [
+        "三城市标准分类（天津直辖市一线/石家庄省会二线/苏州地级市）",
+        "分类推断说明"
+      ],
+      "labels": {
+        "turn_type": "single",
+        "has_gt": true,
+        "category": "budget"
+      }
+    },
+    {
+      "id": "budg_007",
+      "query": "午晚餐的报销限额是多少？早餐呢？",
+      "expect_agent": [
+        "budget_check"
+      ],
+      "must_contain": [
+        "100",
+        "30"
+      ],
+      "intent": "budget_check",
+      "difficulty": "medium",
+      "rubric_points": [
+        "午晚餐 100 元/餐",
+        "早餐 30 元/餐（含早则免）"
+      ],
+      "labels": {
+        "turn_type": "single",
+        "has_gt": true,
+        "category": "budget"
+      }
+    },
+    {
+      "id": "budg_008",
+      "query": "短途出差 300 公里以内有什么交通政策？",
+      "expect_agent": [
+        "budget_check"
+      ],
+      "must_contain": [
+        "300",
+        "高铁"
+      ],
+      "intent": "budget_check",
+      "difficulty": "medium",
+      "rubric_points": [
+        "300 公里内鼓励高铁",
+        "政策原文准确"
+      ],
+      "labels": {
+        "turn_type": "single",
+        "has_gt": true,
+        "category": "budget"
+      }
+    },
+    {
+      "id": "cmpf_002",
+      "query": "北京到上海，坐高铁还是飞机划算？",
+      "expect_agent": [
+        "compare_fares"
+      ],
+      "must_contain": [],
+      "intent": "compare_fares",
+      "difficulty": "easy",
+      "rubric_points": [
+        "高铁与飞机费用对比",
+        "推荐结论"
+      ],
+      "labels": {
+        "turn_type": "single",
+        "has_gt": true,
+        "category": "comparison"
+      }
+    },
+    {
+      "id": "cmpf_003",
+      "query": "下月去成都，对比一下经济舱全价和高铁二等座的价钱",
+      "expect_agent": [
+        "compare_fares"
+      ],
+      "must_contain": [],
+      "intent": "compare_fares",
+      "difficulty": "medium",
+      "rubric_points": [
+        "两类票价对比",
+        "价差结论"
+      ],
+      "labels": {
+        "turn_type": "single",
+        "has_gt": true,
+        "category": "comparison"
+      }
+    },
+    {
+      "id": "cmpf_004",
+      "query": "我出差频繁，办航空公司的会员卡值不值？",
+      "expect_agent": [
+        "compare_fares"
+      ],
+      "must_contain": [],
+      "intent": "compare_fares",
+      "difficulty": "hard",
+      "rubric_points": [
+        "会员权益与成本分析",
+        "基于常出差的场景给建议"
+      ],
+      "labels": {
+        "turn_type": "single",
+        "has_gt": true,
+        "category": "comparison"
+      }
+    },
+    {
+      "id": "cmpf_005",
+      "query": "杭州住酒店，协议价和门市价一般差多少？",
+      "expect_agent": [
+        "compare_fares"
+      ],
+      "must_contain": [
+        "8",
+        "9"
+      ],
+      "intent": "compare_fares",
+      "difficulty": "medium",
+      "rubric_points": [
+        "协议酒店 8-9 折的折扣说明",
+        "省钱幅度量化"
+      ],
+      "labels": {
+        "turn_type": "single",
+        "has_gt": true,
+        "category": "comparison"
+      }
+    },
+    {
+      "id": "cmpf_006",
+      "query": "同一航线早中晚的航班价格差异大吗？怎么选最省？",
+      "expect_agent": [
+        "compare_fares"
+      ],
+      "must_contain": [],
+      "intent": "compare_fares",
+      "difficulty": "hard",
+      "rubric_points": [
+        "时段价差说明",
+        "省钱选座建议"
+      ],
+      "labels": {
+        "turn_type": "single",
+        "has_gt": true,
+        "category": "comparison"
+      }
+    },
+    {
+      "id": "cmpf_007",
+      "query": "租车自驾和坐高铁出差，哪种综合成本更低？",
+      "expect_agent": [
+        "compare_fares"
+      ],
+      "must_contain": [],
+      "intent": "compare_fares",
+      "difficulty": "hard",
+      "rubric_points": [
+        "租车与高铁成本对比维度",
+        "场景化结论"
+      ],
+      "labels": {
+        "turn_type": "single",
+        "has_gt": true,
+        "category": "comparison"
+      }
+    },
+    {
+      "id": "walrt_002",
+      "query": "明天北京有雨吗？出差要带伞不",
+      "expect_agent": [
+        "weather_alert",
+        "information_query"
+      ],
+      "must_contain": [],
+      "intent": "weather_alert",
+      "difficulty": "easy",
+      "rubric_points": [
+        "明日北京降雨信息",
+        "带伞建议明确"
+      ],
+      "labels": {
+        "turn_type": "single",
+        "has_gt": true,
+        "category": "weather"
+      }
+    },
+    {
+      "id": "walrt_003",
+      "query": "下周去哈尔滨出差，听说很冷，需要带什么衣服？",
+      "expect_agent": [
+        "weather_alert",
+        "information_query"
+      ],
+      "must_contain": [],
+      "intent": "weather_alert",
+      "difficulty": "medium",
+      "rubric_points": [
+        "哈尔滨气温信息",
+        "御寒着装建议"
+      ],
+      "labels": {
+        "turn_type": "single",
+        "has_gt": true,
+        "category": "weather"
+      }
+    },
+    {
+      "id": "walrt_004",
+      "query": "台风季要去厦门出差，行程会不会受影响？",
+      "expect_agent": [
+        "weather_alert",
+        "information_query"
+      ],
+      "must_contain": [],
+      "intent": "weather_alert",
+      "difficulty": "hard",
+      "rubric_points": [
+        "台风对行程的影响分析",
+        "改签或调整建议"
+      ],
+      "labels": {
+        "turn_type": "single",
+        "has_gt": true,
+        "category": "weather"
+      }
+    },
+    {
+      "id": "walrt_005",
+      "query": "最近温差大吗？我怕感冒，出差该注意什么",
+      "expect_agent": [
+        "weather_alert"
+      ],
+      "must_contain": [],
+      "intent": "weather_alert",
+      "difficulty": "medium",
+      "rubric_points": [
+        "温差信息",
+        "健康出行提示"
+      ],
+      "labels": {
+        "turn_type": "single",
+        "has_gt": true,
+        "category": "weather"
+      }
+    },
+    {
+      "id": "walrt_006",
+      "query": "查查敦煌下周的天气，适合去玩吗？",
+      "expect_agent": [
+        "weather_alert",
+        "information_query"
+      ],
+      "must_contain": [],
+      "intent": "weather_alert",
+      "difficulty": "medium",
+      "rubric_points": [
+        "敦煌天气数据",
+        "游玩适宜性建议"
+      ],
+      "labels": {
+        "turn_type": "single",
+        "has_gt": true,
+        "category": "weather"
+      }
+    },
+    {
+      "id": "cnfl_002",
+      "query": "我 12 月 10 日到 12 日要去广州出差，跟已有行程有冲突吗？",
+      "expect_agent": [
+        "conflict_check",
+        "itinerary_lookup"
+      ],
+      "must_contain": [],
+      "intent": "conflict_check",
+      "difficulty": "medium",
+      "rubric_points": [
+        "与历史行程的冲突核对",
+        "结论明确（有/无冲突）"
+      ],
+      "labels": {
+        "turn_type": "single",
+        "has_gt": true,
+        "category": "conflict"
+      }
+    },
+    {
+      "id": "cnfl_003",
+      "query": "查一下我下周的出差安排会不会和时间上已有的安排撞车",
+      "expect_agent": [
+        "conflict_check",
+        "itinerary_lookup"
+      ],
+      "must_contain": [],
+      "intent": "conflict_check",
+      "difficulty": "hard",
+      "rubric_points": [
+        "时间区间重叠检测",
+        "撞车结论或无冲突确认"
+      ],
+      "labels": {
+        "turn_type": "single",
+        "has_gt": true,
+        "category": "conflict"
+      }
+    },
+    {
+      "id": "cnfl_004",
+      "query": "公司安排我 11 月 20 日去上海培训三天，但我好像那天有出差？",
+      "expect_agent": [
+        "conflict_check",
+        "itinerary_lookup"
+      ],
+      "must_contain": [],
+      "intent": "conflict_check",
+      "difficulty": "hard",
+      "rubric_points": [
+        "识别培训与出差的日期冲突",
+        "给出解决建议"
+      ],
+      "labels": {
+        "turn_type": "single",
+        "has_gt": true,
+        "category": "conflict"
+      }
+    },
+    {
+      "id": "cnfl_005",
+      "query": "我报了下月 15 号的考试，帮我看看那天有没有出差任务",
+      "expect_agent": [
+        "conflict_check",
+        "itinerary_lookup"
+      ],
+      "must_contain": [],
+      "intent": "conflict_check",
+      "difficulty": "hard",
+      "rubric_points": [
+        "考试日期与行程核对",
+        "结论明确"
+      ],
+      "labels": {
+        "turn_type": "single",
+        "has_gt": true,
+        "category": "conflict"
+      }
+    },
+    {
+      "id": "cnfl_006",
+      "query": "最近有什么行程是重叠的吗？我怕自己排重了",
+      "expect_agent": [
+        "conflict_check",
+        "itinerary_lookup"
+      ],
+      "must_contain": [],
+      "intent": "conflict_check",
+      "difficulty": "medium",
+      "rubric_points": [
+        "全部行程两两核对",
+        "重叠列表或无冲突确认"
+      ],
+      "labels": {
+        "turn_type": "single",
+        "has_gt": true,
+        "category": "conflict"
+      }
+    },
+    {
+      "id": "sens_004",
+      "query": "我要投诉你们平台，订的酒店根本没法住！",
+      "expect_agent": [
+        "escalation"
+      ],
+      "must_contain": [],
+      "intent": "escalation",
+      "difficulty": "easy",
+      "rubric_points": [
+        "转人工通道处理",
+        "安抚话术得体"
+      ],
+      "labels": {
+        "turn_type": "single",
+        "has_gt": true,
+        "category": "complaint"
+      }
+    },
+    {
+      "id": "sens_005",
+      "query": "这次出差机票钱说好的能报，现在告诉我不能报，我要个说法",
+      "expect_agent": [
+        "escalation"
+      ],
+      "must_contain": [],
+      "intent": "escalation",
+      "difficulty": "medium",
+      "rubric_points": [
+        "识别为投诉转人工",
+        "不自行承诺报销结果"
+      ],
+      "labels": {
+        "turn_type": "single",
+        "has_gt": true,
+        "category": "complaint"
+      }
+    },
+    {
+      "id": "sens_006",
+      "query": "我在机场丢了一个很重要的包，里面有护照，怎么办？",
+      "expect_agent": [
+        "escalation"
+      ],
+      "must_contain": [],
+      "intent": "escalation",
+      "difficulty": "medium",
+      "rubric_points": [
+        "紧急情况指引（挂失/联系使领馆）",
+        "或转人工协助"
+      ],
+      "labels": {
+        "turn_type": "single",
+        "has_gt": true,
+        "category": "emergency"
+      }
+    },
+    {
+      "id": "sens_007",
+      "query": "我被隔离在酒店了，人身感觉不安全，需要马上联系到人",
+      "expect_agent": [
+        "escalation"
+      ],
+      "must_contain": [],
+      "intent": "escalation",
+      "difficulty": "hard",
+      "rubric_points": [
+        "人身安全优先处理",
+        "紧急联系方式给出"
+      ],
+      "labels": {
+        "turn_type": "single",
+        "has_gt": true,
+        "category": "emergency"
+      }
+    },
+    {
+      "id": "trip_002",
+      "query": "清明 3 天假，去扬州还是去苏州玩比较好？",
+      "expect_agent": [
+        "trip_compare"
+      ],
+      "must_contain": [],
+      "intent": "trip_compare",
+      "difficulty": "medium",
+      "rubric_points": [
+        "两地游玩价值对比",
+        "推荐结论与理由"
+      ],
+      "labels": {
+        "turn_type": "single",
+        "has_gt": true,
+        "category": "comparison"
+      }
+    },
+    {
+      "id": "trip_003",
+      "query": "同样是 3 天预算 2000，帮我比一比去重庆和去西安的方案",
+      "expect_agent": [
+        "trip_compare"
+      ],
+      "must_contain": [],
+      "intent": "trip_compare",
+      "difficulty": "hard",
+      "rubric_points": [
+        "两地费用/行程对比",
+        "预算约束下的推荐"
+      ],
+      "labels": {
+        "turn_type": "single",
+        "has_gt": true,
+        "category": "comparison"
+      }
+    },
+    {
+      "id": "trip_004",
+      "query": "下个月出差去上海，是当天往返好还是住一晚好？",
+      "expect_agent": [
+        "trip_compare",
+        "compare_fares"
+      ],
+      "must_contain": [],
+      "intent": "trip_compare",
+      "difficulty": "hard",
+      "rubric_points": [
+        "当天往返 vs 住宿的成本对比",
+        "推荐方案"
+      ],
+      "labels": {
+        "turn_type": "single",
+        "has_gt": true,
+        "category": "comparison"
+      }
+    },
+    {
+      "id": "trip_005",
+      "query": "带 5 岁孩子出去玩，青岛和三亚哪个更适合？",
+      "expect_agent": [
+        "trip_compare"
+      ],
+      "must_contain": [],
+      "intent": "trip_compare",
+      "difficulty": "hard",
+      "rubric_points": [
+        "亲子适宜性对比（安全/节奏）",
+        "推荐结论"
+      ],
+      "labels": {
+        "turn_type": "single",
+        "has_gt": true,
+        "category": "comparison"
+      }
+    },
+    {
+      "id": "trip_006",
+      "query": "我想对比一下去昆明出差顺便玩 2 天，和专门去昆明玩 2 天的安排",
+      "expect_agent": [
+        "trip_compare"
+      ],
+      "must_contain": [],
+      "intent": "trip_compare",
+      "difficulty": "hard",
+      "rubric_points": [
+        "两种方案的差异分析",
+        "各自优劣"
+      ],
+      "labels": {
+        "turn_type": "single",
+        "has_gt": true,
+        "category": "comparison"
+      }
+    },
+    {
+      "id": "trip_007",
+      "query": "部门团建选团建基地还是城市游？各有什么优劣？",
+      "expect_agent": [
+        "trip_compare"
+      ],
+      "must_contain": [],
+      "intent": "trip_compare",
+      "difficulty": "hard",
+      "rubric_points": [
+        "两类团建方案对比",
+        "场景化建议"
+      ],
+      "labels": {
+        "turn_type": "single",
+        "has_gt": true,
+        "category": "comparison"
+      }
+    }
+  ],
+  "multi_turn": [
+    {
+      "id": "mt_001",
+      "description": "规划→改偏好→重规划（记忆延续 + 局部重规划）",
+      "turns": [
+        {
+          "query": "帮我规划2027年10月10日到10月11日去苏州的2天行程，必去拙政园",
+          "expect_agent": "itinerary_planning",
+          "must_contain": [
+            "拙政园",
+            "质检"
+          ]
+        },
+        {
+          "query": "改成住万豪，重新规划一下",
+          "expect_agent": "itinerary_planning",
+          "must_contain": [
+            "万豪"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mt_002",
+      "description": "缺要素追问→补充续跑（前置门控闭环）",
+      "turns": [
+        {
+          "query": "帮我规划去杭州的行程",
+          "expect_agent": "needs_input",
+          "must_contain": [
+            "补充"
+          ]
+        },
+        {
+          "query": "去3天，10月20日出发",
+          "expect_agent": "itinerary_planning",
+          "must_contain": [
+            "杭州"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mt_003",
+      "description": "费用预估→改天数重算（局部重规划：P1 复用剔除，P2 重跑时消费上轮预算结果）",
+      "turns": [
+        {
+          "query": "我从北京去杭州出差3天，大概要花多少钱？公司能报多少",
+          "expect_agents": [
+            "budget_check",
+            "expense_estimate"
+          ],
+          "must_contain": [
+            "预算",
+            "预估"
+          ]
+        },
+        {
+          "query": "改成去5天，重新算一下",
+          "expect_agent": "expense_estimate",
+          "must_contain": [
+            "预估"
+          ]
+        }
+      ]
+    }
+  ]
+}

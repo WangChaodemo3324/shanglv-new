@@ -1,0 +1,26 @@
+{
+  "dataset": "LAMDA-NeSy/ChinaTravel-Sandbox",
+  "revision": "885c7dad143bf040238ddca263f4788d582ee0f4",
+  "retrieved_at": "2026-11-24T08:15:52.834618+00:00",
+  "license": "CC-BY-4.0",
+  "disclaimer": "ChinaTravel静态测评沙盒数据，仅供学习与规划演示；价格、营业时间及设施并非实时信息，出行前须核实。",
+  "documents": 11934,
+  "files": {
+    "attractions.parquet": {
+      "rows": 3413,
+      "bytes": 121679,
+      "sha256": "aa6ebb96f4f31b47fc90f1cb8b95d2d164202f99c1f0dac3398058cbb0e9ee7b"
+    },
+    "restaurants.parquet": {
+      "rows": 4655,
+      "bytes": 306558,
+      "sha256": "781893f1f8ae74af3dae2176b60665d12be41990163b25c579eff2ad84f3aaa9"
+    },
+    "accommodations.parquet": {
+      "rows": 3866,
+      "bytes": 208340,
+      "sha256": "e316a06aa94107d6e535cb02f120fcdbef6120c5ee00c21862c25460c4d742d7"
+    }
+  },
+  "documents_sha256": "aa76be3462cab56f522c4db9b3149491a4473c57f8d4dacb5100a92490f535c6"
+}

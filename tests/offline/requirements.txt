@@ -1,0 +1,10 @@
+# Only dependencies for offline code tests; no embedding/model weights.
+agentscope==1.0.16
+mcp>=1.13,<2
+ortools==9.15.6755
+PyYAML==6.0.3
+httpx==0.28.1
+greenlet>=3,<4
+tqdm>=4.66,<5
+fastapi>=0.115,<1
+prometheus-client>=0.20,<1

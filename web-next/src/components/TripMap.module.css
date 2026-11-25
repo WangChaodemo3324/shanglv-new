@@ -1,0 +1,17 @@
+.trip-map-wrap {
+  position: relative;
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid #dbe7f3;
+  margin: 4px 0;
+  max-width: 560px;
+}
+.trip-map-canvas { width: 100%; height: 320px; }
+.trip-map-legend {
+  position: absolute; left: 10px; top: 10px;
+  background: rgba(255,255,255,.92); border-radius: 8px;
+  padding: 6px 10px; display: flex; gap: 10px; flex-wrap: wrap;
+  box-shadow: 0 2px 8px rgba(20,50,90,.15);
+}
+.tm-legend-item { font-size: 11px; color: #2c4a68; display: flex; align-items: center; gap: 4px; }
+.tm-legend-item i { width: 10px; height: 10px; border-radius: 50%; display: inline-block; }

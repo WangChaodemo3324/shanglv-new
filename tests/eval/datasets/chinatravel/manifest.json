@@ -1,0 +1,22 @@
+[
+  {
+    "split": "easy",
+    "count": 300,
+    "raw_sha256": "cb0b7940defa8a9b260bac12bee3fb3254678883b40371c3ca8f33c5f37153e3"
+  },
+  {
+    "split": "medium",
+    "count": 150,
+    "raw_sha256": "9cd49188a8f2a01b900abecc3f10263c257bcb761cf2635e5f0d4fb53d93f77b"
+  },
+  {
+    "split": "human",
+    "count": 154,
+    "raw_sha256": "2f0d61e37665a345bd428732ace6e1ce9d6de2af8d292047bcf5cc1c4f9cfc78"
+  },
+  {
+    "split": "human1000",
+    "count": 1000,
+    "raw_sha256": "9fca5b9044fb351619f47e1573320cc512259fd3539d08937c62c560a54a7f05"
+  }
+]

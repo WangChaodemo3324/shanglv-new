@@ -1,0 +1,79 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+.venv-offline/
+ENV/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# AgentScope
+.agentscope/
+
+# Data
+data/rag_knowledge/
+data/preferences/*.json
+!data/preferences/.gitkeep
+
+# Logs
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
+
+# 本地大模型（4.4GB，按 文档和视频/如何运行.md 第 5 步自行下载）
+data/models/
+
+# pi-durable 运行时数据（SQLite checkpoint，自动生成）
+data/pi-durable/
+
+# 本地记忆降级文件
+data/memory/
+
+# 构建产物
+web-next/.next/
+services/pi-durable/dist/
+node_modules/
+*.tsbuildinfo
+
+# 本地配置、运行状态与测试产物
+.env
+.env.*
+!.env.example
+tmp/
+tests/results/
+*.db
+*.db-*
+*.sqlite
+*.sqlite-*
+*.sqlite3
+*.sqlite3-*
+*.lockfile
+
+# 可从固定版本原始表重建的知识库派生文件
+skills/ask-question/data/chinatravel/documents.jsonl

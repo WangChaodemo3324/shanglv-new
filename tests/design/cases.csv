@@ -1,0 +1,11 @@
+id,requirement,precondition,steps,expected,evidence
+API-001,REQ-API-01,空模型队列,发送缺失null错误类型和超长message,422且模型和pipeline未执行,状态码及调用记录
+API-002,REQ-API-01,固定意图与技能输出,发送纯空白message,422且不调用模型,响应与模型计数
+API-003,REQ-IDEM-01,独立用户A会话,保存偏好后同标识重发并查询历史偏好,仅执行一次且历史两条和偏好一致,响应及实际JSON历史
+API-004,REQ-GATE-01,固定两轮意图,先缺日期天数再补齐,先追问且第二轮意图输入含第一轮历史,响应及模型输入（规划未注册不声称生成成功）
+API-005,REQ-STATE-01,同用户AB会话,暂停A技能然后完成B再释放A,A响应仍属于A,Event顺序与响应会话字段
+API-006,REQ-IDEM-01,同用户同请求标识,暂停首请求并同时提交重复请求再释放,相同响应且意图技能各一次,模型次数与响应
+API-007,REQ-FAIL-01,独立pipeline,注入编排异常后检查键与计数,502且键释放且inflight归零,状态码幂等状态与指标差值
+API-008,REQ-HISTORY-01,JSON降级无PG,请求删除会话,明确503且无模型调用,状态码
+CACHE-001,REQ-CACHE-01,杭州差标成功缓存,提交北京replan规划,不复用杭州差标,plan.reused
+CACHE-002,REQ-MEM-01,如家偏好已缓存,删缓存后并发旧读回填再写万豪,写成功后返回万豪,存储与缓存结果对比
